@@ -1,0 +1,87 @@
+/* === WARNA DAN DASAR HALAMAN === */
+:root {
+  --ink: #202a2e;
+  --muted: #647174;
+  --paper: #f5f3ed;
+  --white: #ffffff;
+  --green: #1e5b4f;
+  --orange: #c95d35;
+  --line: #d9ded7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* === HEADER DAN NAVIGASI === */
+.site-header { background: var(--green); color: var(--white); border-bottom: 4px solid var(--orange); }
+.header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand { color: var(--white); font-size: 1.15rem; font-weight: 800; letter-spacing: 2px; text-decoration: none; }
+.brand span { color: #f5b18f; }
+nav { display: flex; gap: 22px; }
+nav > a { color: var(--white); font-size: .9rem; text-decoration: none; transition: color .2s ease; }
+nav > a:hover { color: #ffd2bd; }
+
+/* === LEBAR DAN TATA LETAK ARTIKEL === */
+main { max-width: 720px; margin: 0 auto; padding: 42px 22px 64px; }
+.post { background: var(--white); padding: 42px 48px; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 34px rgba(32,42,46,.06); }
+.eyebrow { margin: 0 0 12px; color: var(--orange); font-size: .76rem; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; }
+h1, h2 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.25; }
+h1 { margin: 0 0 18px; font-size: clamp(2rem, 5vw, 2.7rem); letter-spacing: -.7px; }
+.dek { margin: 0 0 22px; color: var(--muted); font-size: 1.05rem; line-height: 1.7; }
+.post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-bottom: 24px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+
+/* === KOTAK DATA UTAMA === */
+.hero-note { margin: 28px 0; padding: 22px 24px; background: #edf4ef; border-left: 5px solid var(--green); display: flex; flex-direction: column; }
+.hero-number { color: var(--green); font-size: 2rem; font-weight: 800; line-height: 1.3; }
+.hero-caption { color: var(--muted); font-size: .88rem; }
+
+/* === TIPOGRAFI DAN ISI ARTIKEL === */
+.post p { margin: 0 0 20px; text-align: left; }
+.post h2 { margin: 34px 0 14px; color: var(--green); font-size: 1.55rem; }
+.post a { color: var(--green); font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.post a:hover { color: var(--orange); }
+.post p:first-child { margin-top: 0; }
+.post > ul { margin: 0 0 24px; padding-left: 24px; }
+.post > ul li { margin-bottom: 9px; padding-left: 4px; }
+.post > ul li::marker { color: var(--orange); }
+
+/* === KUTIPAN === */
+blockquote { margin: 30px 0; padding: 18px 22px; border-left: 4px solid var(--orange); background: #fbf0e9; color: #49352d; font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 700; line-height: 1.6; }
+
+/* === REFERENSI === */
+.source-box { margin-top: 38px; padding: 22px 24px; background: #f7f8f5; border: 1px solid var(--line); border-radius: 8px; }
+.source-box h2 { margin-top: 0; font-size: 1.3rem; }
+.source-box ol { margin-bottom: 0; padding-left: 22px; }
+.source-box li { margin-bottom: 8px; overflow-wrap: anywhere; }
+.source-box li:last-child { margin-bottom: 0; }
+
+/* === FOOTER === */
+footer { padding: 28px 22px; background: var(--ink); color: var(--white); text-align: center; }
+footer p { max-width: 720px; margin: 0 auto 8px; font-size: .88rem; }
+footer p:first-child { font-weight: 700; }
+.footer-note { color: #c7d0cf; font-size: .76rem; }
+
+/* === TAMPILAN LAYAR KECIL === */
+@media (max-width: 600px) {
+  .header-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
+  nav { flex-wrap: wrap; gap: 16px; }
+  main { padding: 22px 12px 38px; }
+  .post { padding: 28px 22px; }
+  h1 { font-size: 2rem; }
+  .hero-number { font-size: 1.7rem; }
+}
